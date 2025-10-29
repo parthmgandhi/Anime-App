@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">AnimeApp</string>
+    <string name="poster1">One Piece</string>
+    <string name="poster2">Death Note</string>
+    <string name="poster3">Jujutsu Kaisen</string>
+    <string name="poster4">Dan Da Dan</string>
+    <string name="poster5">Demon Slayer</string>
+    <string name="poster6">Dragon Ball Z</string>
+    <string name="poster7">JoJo\'s Bizarre Adventure</string>
+    <string name="poster8">Mob Psycho</string>
+    <string name="poster9">Chainsaw Man</string>
+    <string name="poster10">Parasyte</string>
+    <string name="poster11">Attack On Titan</string>
+    <string name="poster12">Beserk</string>
+    <string name="poster13">Solo Levelling</string>
+    <string name="descriptionP1">An epic pirate adventure following Monkey D. Luffy, a boy with a rubber body who dreams of becoming the Pirate King. Together with his diverse crew, the Straw Hat Pirates, he sails across vast seas, battling rival pirates, marines, and uncovering ancient mysteries in pursuit of the legendary treasure known as the One Piece.</string>
+    <string name="descriptionP2">A psychological thriller centered around Light Yagami, a genius high schooler who finds a notebook that can kill anyone whose name is written in it. As he tries to create a “perfect world” free of crime, he’s hunted by the mysterious detective L, leading to a gripping battle of wits.</string>
+    <string name="descriptionP3">A dark fantasy about Yuji Itadori, a high schooler who becomes host to a powerful curse named Ryomen Sukuna. To protect humanity, Yuji joins the Tokyo Jujutsu High where sorcerers battle terrifying curses born from negative emotions.</string>
+    <string name="descriptionP4">A wild mix of sci-fi and supernatural where high schoolers Momo Ayase and Okarun get caught between aliens and ghosts. Their strange powers and budding friendship lead to hilarious, chaotic, and heartfelt adventures.</string>
+    <string name="descriptionP5">After his family is slaughtered by demons, Tanjiro Kamado joins the Demon Slayer Corps to avenge them and save his sister Nezuko, who has turned into a demon herself.</string>
+    <string name="descriptionP6">A legendary series following Goku and his friends as they defend Earth against powerful foes — from Frieza to Cell and Majin Buu. Packed with intense battles, transformations, and camaraderie, it defines the shonen genre.</string>
+    <string name="descriptionP7">Spanning generations, this saga follows the Joestar family, each member possessing unique powers and a destiny intertwined with bizarre supernatural events.</string>
+    <string name="descriptionP8">From the creator of One Punch Man, this anime follows Shigeo “Mob” Kageyama, a mild-mannered boy with immense psychic power. As he learns to balance emotions and strength, Mob faces both inner and outer conflicts.</string>
+    <string name="descriptionP9">A gritty and violent series where Denji, a poor young man fused with his pet devil Pochita, becomes Chainsaw Man, a devil hunter wielding chainsaws from his arms. It’s a brutal yet emotional ride through love, loss, and chaos.</string>
+    <string name="descriptionP10">A chilling sci-fi horror tale about Shinichi Izumi, whose hand is taken over by a parasitic alien. Together, they must coexist and fight other parasites consuming humanity.</string>
+    <string name="descriptionP11">In a world besieged by man-eating Titans, Eren Yeager vows to destroy them after witnessing tragedy. What begins as survival becomes a tale of revenge, politics, and shocking revelations.</string>
+    <string name="descriptionP12">A dark fantasy masterpiece following Guts, a lone mercenary battling demonic forces and fate itself after betrayal by his closest friend. Brutal, emotional, and philosophical.</string>
+    <string name="descriptionP13">Based on the hit web novel, it follows Sung Jinwoo, the weakest hunter in the world, who gains a mysterious ability to level up endlessly after a near-death encounter. From powerless to unstoppable, his rise is both epic and emotional.</string>
+</resources>
