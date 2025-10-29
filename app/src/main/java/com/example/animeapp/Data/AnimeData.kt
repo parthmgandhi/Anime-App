@@ -6,7 +6,7 @@ import androidx.annotation.StringRes
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-data class DrawableStringPair(
+data class AnimeData(
     @DrawableRes val Drawable: Int,
     @StringRes val Text: Int,
     @StringRes val Description: Int,

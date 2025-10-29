@@ -18,19 +18,15 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import androidx.navigation.compose.currentBackStackEntryAsState
-import androidx.navigation.compose.rememberNavController
 import com.example.animeapp.AnimeRelated.AnimePost
 import com.example.animeapp.Data.AnimePosterListJA
 import com.example.animeapp.Bars.TopBar
 import com.example.animeapp.Data.AnimePosterListNW
 import com.example.animeapp.Data.AnimePosterListT
-import com.example.animeapp.Data.DrawableStringPair
+import com.example.animeapp.Data.AnimeData
 import com.example.animeapp.Bars.SearchBar
-import com.example.animeapp.ui.theme.AnimeAppTheme
 
 @Composable
 fun DiscoverPage(navController: NavController){
@@ -103,7 +99,7 @@ fun WithTitle(
 
 @Composable
 fun Layout(
-    data: List<DrawableStringPair>,
+    data: List<AnimeData>,
     navController: NavController,
     modifier: Modifier = Modifier
 ){

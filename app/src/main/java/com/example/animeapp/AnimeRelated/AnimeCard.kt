@@ -16,7 +16,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.example.animeapp.Data.DrawableStringPair
+import com.example.animeapp.Data.AnimeData
 
 @Composable
 fun AnimePost(
@@ -30,7 +30,7 @@ fun AnimePost(
     navController: NavController,
     modifier: Modifier = Modifier
 ){
-    val anime = DrawableStringPair(drawable, text, description, rating, rank, popularity)
+    val anime = AnimeData(drawable, text, description, rating, rank, popularity)
 
     Column(
         modifier = modifier

@@ -28,7 +28,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.animeapp.AnimeRelated.AnimePost
 import com.example.animeapp.Data.CompletedList
-import com.example.animeapp.Data.DrawableStringPair
+import com.example.animeapp.Data.AnimeData
 import com.example.animeapp.Data.NowWatchingList
 import com.example.animeapp.Data.OnHoldList
 import com.example.animeapp.Bars.TopBar
@@ -57,7 +57,7 @@ fun MyList(navController: NavController) {
 fun DataFilled(
     innerPaddingValues: PaddingValues,
     selected: Int,
-    data: List<List<DrawableStringPair>>,
+    data: List<List<AnimeData>>,
     navController: NavController,
     modifier: Modifier = Modifier
 ) {

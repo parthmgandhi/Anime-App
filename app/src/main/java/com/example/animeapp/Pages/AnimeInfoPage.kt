@@ -1,6 +1,5 @@
 package com.example.animeapp.Pages
 
-import androidx.annotation.StringRes
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -29,14 +28,13 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.animeapp.Bars.BackTopBar
-import com.example.animeapp.Data.DrawableStringPair
-import com.example.animeapp.R
+import com.example.animeapp.Data.AnimeData
 
 @Composable
 fun AnimeInfoPage(navController: NavController){
     val anime = navController.previousBackStackEntry
         ?.savedStateHandle
-        ?.get<DrawableStringPair>("animeData")
+        ?.get<AnimeData>("animeData")
 
     Scaffold(
         topBar = {BackTopBar(navController)}
@@ -53,7 +51,7 @@ fun AnimeInfoPage(navController: NavController){
 @Composable
 fun AnimeInfo(
     innerPaddingValues: PaddingValues,
-    anime: DrawableStringPair,
+    anime: AnimeData,
     modifier: Modifier = Modifier
 ) {
     Column(
