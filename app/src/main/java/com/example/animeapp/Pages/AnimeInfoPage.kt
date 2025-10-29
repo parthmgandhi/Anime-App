@@ -29,6 +29,10 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.animeapp.Bars.BackTopBar
 import com.example.animeapp.Data.AnimeData
+import com.example.animeapp.Data.CategoryButtonLogic
+import com.example.animeapp.Data.CompletedList
+import com.example.animeapp.Data.NowWatchingList
+import com.example.animeapp.Data.OnHoldList
 
 @Composable
 fun AnimeInfoPage(navController: NavController){
@@ -40,7 +44,7 @@ fun AnimeInfoPage(navController: NavController){
         topBar = {BackTopBar(navController)}
     ) { innerPadding ->
         if(anime != null){
-            AnimeInfo(innerPadding, anime)
+            AnimeInfo(innerPadding, anime, navController)
         } else {
             Text("No anime data found", modifier = Modifier.padding(16.dp))
         }
@@ -52,42 +56,16 @@ fun AnimeInfoPage(navController: NavController){
 fun AnimeInfo(
     innerPaddingValues: PaddingValues,
     anime: AnimeData,
+    navController: NavController,
     modifier: Modifier = Modifier
 ) {
     Column(
         modifier = modifier.padding(innerPaddingValues)
     ) {
         Spacer(modifier = modifier.height(15.dp))
-        Row(
-            modifier = modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.spacedBy(16.dp)
-        ) {
-            Image(
-                painter = painterResource(anime.Drawable),
-                contentDescription = null,
-                modifier = modifier
-                    .size(
-                        height =  300.dp,
-                        width =  237.dp
-                    )
-                    .fillMaxWidth()
-                    .padding(horizontal = 10.dp),
-                contentScale = ContentScale.Crop,
-            )
-
-            Column(
-                modifier = Modifier
-                    .weight(1f)
-                    .align(Alignment.CenterVertically),
-                verticalArrangement = Arrangement.spacedBy(17.dp)
-            ) {
-                RatingData("Score:", anime.Rating)
-                RatingData("Rank:",anime.Rank)
-                RatingData("Popularity:", anime.Popularity)
-            }
-        }
+        UpperPart(anime)
         Spacer(modifier = modifier.height(15.dp))
-        CategoryButton()
+        CategoryButton(anime,navController)
         Spacer(modifier = modifier.height(20.dp))
         Text(
             text = stringResource(anime.Text),
@@ -109,6 +87,41 @@ fun AnimeInfo(
 }
 
 @Composable
+fun UpperPart(
+    anime: AnimeData,
+    modifier: Modifier = Modifier
+) {
+    Row(
+        modifier = modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.spacedBy(16.dp)
+    ) {
+        Image(
+            painter = painterResource(anime.Drawable),
+            contentDescription = null,
+            modifier = modifier
+                .size(
+                    height =  300.dp,
+                    width =  237.dp
+                )
+                .fillMaxWidth()
+                .padding(horizontal = 10.dp),
+            contentScale = ContentScale.Crop,
+        )
+
+        Column(
+            modifier = Modifier
+                .weight(1f)
+                .align(Alignment.CenterVertically),
+            verticalArrangement = Arrangement.spacedBy(17.dp)
+        ) {
+            RatingData("Score:", anime.Rating)
+            RatingData("Rank:",anime.Rank)
+            RatingData("Popularity:", anime.Popularity)
+        }
+    }
+}
+
+@Composable
 fun RatingData(
     heading: String,
     value: Double,
@@ -127,6 +140,8 @@ fun RatingData(
 
 @Composable
 fun CategoryButton(
+    anime: AnimeData,
+    navController: NavController,
     modifier: Modifier = Modifier
 ) {
     Row(
@@ -134,7 +149,11 @@ fun CategoryButton(
         modifier = modifier.padding(horizontal = 10.dp)
     ) {
         Button(
-            onClick = {},
+            onClick = {CategoryButtonLogic(
+                anime,
+                NowWatchingList,
+                navController
+            )},
             shape = MaterialTheme.shapes.extraSmall,
             colors = ButtonDefaults.buttonColors(
                 containerColor = Color(0xFF3F51B5),
@@ -147,7 +166,11 @@ fun CategoryButton(
             )
         }
         Button(
-            onClick = {},
+            onClick = {CategoryButtonLogic(
+                anime,
+                CompletedList,
+                navController
+            )},
             shape = MaterialTheme.shapes.extraSmall,
             colors = ButtonDefaults.buttonColors(
                 containerColor = Color(0xFF3F51B5),
@@ -160,7 +183,11 @@ fun CategoryButton(
             )
         }
         Button(
-            onClick = {},
+            onClick = {CategoryButtonLogic(
+                anime,
+                OnHoldList,
+                navController
+            )},
             shape = MaterialTheme.shapes.extraSmall,
             colors = ButtonDefaults.buttonColors(
                 containerColor = Color(0xFF3F51B5),

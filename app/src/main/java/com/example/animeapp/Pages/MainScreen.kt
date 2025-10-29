@@ -40,3 +40,11 @@ fun MainScreen() {
     }
 }
 
+@Preview
+@Composable
+fun p(){
+    AnimeAppTheme {
+        MainScreen()
+    }
+}
+

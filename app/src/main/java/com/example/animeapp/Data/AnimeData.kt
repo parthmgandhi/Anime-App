@@ -14,3 +14,5 @@ data class AnimeData(
     val Rank: Double,
     val Popularity: Double
 ): Parcelable
+
+

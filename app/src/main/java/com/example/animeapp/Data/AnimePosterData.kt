@@ -30,20 +30,20 @@ val AnimePosterListT = listOf(
     AnimeData(R.drawable.poster2, R.string.poster2, R.string.descriptionP2, 4.8, 245392.0, 329432.0)
 )
 
-val NowWatchingList = listOf(
+val NowWatchingList = mutableListOf(
     AnimeData(R.drawable.poster2, R.string.poster2, R.string.descriptionP2, 4.8, 245392.0, 329432.0),
     AnimeData(R.drawable.poster5, R.string.poster5, R.string.descriptionP5, 4.9, 93214.0, 128739.0),
     AnimeData(R.drawable.poster3, R.string.poster3, R.string.descriptionP3, 4.7, 76453.0, 104892.0)
 )
 
-val CompletedList = listOf(
+val CompletedList = mutableListOf(
     AnimeData(R.drawable.poster8, R.string.poster8, R.string.descriptionP8, 4.8, 23423.0, 83921.0),
     AnimeData(R.drawable.poster9, R.string.poster9, R.string.descriptionP9, 4.5, 88213.0, 119234.0),
     AnimeData(R.drawable.poster11, R.string.poster11, R.string.descriptionP11, 4.9, 150324.0, 298732.0),
     AnimeData(R.drawable.poster1, R.string.poster1, R.string.descriptionP1, 4.7, 209394.0, 174932.0)
 )
 
-val OnHoldList = listOf(
+val OnHoldList = mutableListOf(
     AnimeData(R.drawable.poster7, R.string.poster7, R.string.descriptionP7, 4.4, 19843.0, 65433.0),
     AnimeData(R.drawable.poster6, R.string.poster6, R.string.descriptionP6, 4.6, 204839.0, 178294.0),
     AnimeData(R.drawable.poster13, R.string.poster13, R.string.descriptionP13, 4.9, 439283.0, 259342.0),
