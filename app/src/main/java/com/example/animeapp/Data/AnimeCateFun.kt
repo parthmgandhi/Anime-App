@@ -17,3 +17,10 @@ fun CategoryButtonLogic(
 
     navController.navigateUp()
 }
+
+fun buttonEnable(
+    animeData: AnimeData,
+    targetList: MutableList<AnimeData>
+): Boolean{
+    return !targetList.any {it.Drawable == animeData.Drawable}
+}

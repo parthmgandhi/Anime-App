@@ -33,6 +33,7 @@ import com.example.animeapp.Data.CategoryButtonLogic
 import com.example.animeapp.Data.CompletedList
 import com.example.animeapp.Data.NowWatchingList
 import com.example.animeapp.Data.OnHoldList
+import com.example.animeapp.Data.buttonEnable
 
 @Composable
 fun AnimeInfoPage(navController: NavController){
@@ -158,7 +159,8 @@ fun CategoryButton(
             colors = ButtonDefaults.buttonColors(
                 containerColor = Color(0xFF3F51B5),
                 contentColor = Color.White
-            )
+            ),
+            enabled = buttonEnable(anime,NowWatchingList)
         ){
             Text(
                 text = "Now watching",
@@ -175,7 +177,8 @@ fun CategoryButton(
             colors = ButtonDefaults.buttonColors(
                 containerColor = Color(0xFF3F51B5),
                 contentColor = Color.White
-            )
+            ),
+            enabled = buttonEnable(anime,CompletedList)
         ){
             Text(
                 text = "Completed",
@@ -192,7 +195,8 @@ fun CategoryButton(
             colors = ButtonDefaults.buttonColors(
                 containerColor = Color(0xFF3F51B5),
                 contentColor = Color.White
-            )
+            ),
+            enabled = buttonEnable(anime,OnHoldList)
         ){
             Text(
                 text = "On Hold",
