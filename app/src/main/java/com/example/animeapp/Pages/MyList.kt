@@ -88,7 +88,7 @@ fun SimpleTabRow(
         contentColor = MaterialTheme.colorScheme.onSurface,
         indicator = { tabPositions ->
             // Underline indicator
-            TabRowDefaults.Indicator(
+            TabRowDefaults.SecondaryIndicator(
                 Modifier.tabIndicatorOffset(tabPositions[selectedIndex]).height(3.dp),
                 color = MaterialTheme.colorScheme.primary
             )
