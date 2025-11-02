@@ -28,8 +28,8 @@ import androidx.compose.ui.unit.sp
 import com.example.animeapp.AnimeRelated.ProfilePic
 import com.example.animeapp.Bars.SearchBar
 import com.example.animeapp.Bars.TopBar
-import com.example.animeapp.ui.theme.DiscussionData
-import com.example.animeapp.ui.theme.discussionDataList
+import com.example.animeapp.Data.DiscussionData
+import com.example.animeapp.Data.discussionDataList
 
 @Composable
 fun DiscussionPage(){

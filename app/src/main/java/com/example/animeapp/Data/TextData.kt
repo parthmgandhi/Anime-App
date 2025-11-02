@@ -1,4 +1,4 @@
-package com.example.animeapp.ui.theme
+package com.example.animeapp.Data
 
 import androidx.annotation.DrawableRes
 import com.example.animeapp.R

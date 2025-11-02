@@ -27,8 +27,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.animeapp.AnimeRelated.ProfilePic
 import com.example.animeapp.Bars.TopBar
-import com.example.animeapp.ui.theme.HomeData
-import com.example.animeapp.ui.theme.homeDataList
+import com.example.animeapp.Data.HomeData
+import com.example.animeapp.Data.homeDataList
 
 @Composable
 fun HomePage(){
