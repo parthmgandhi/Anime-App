@@ -15,9 +15,10 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -32,7 +33,7 @@ import com.example.animeapp.ui.theme.discussionDataList
 
 @Composable
 fun DiscussionPage(){
-    var searchDiscussion by remember { mutableStateOf("") }
+    var searchDiscussion by rememberSaveable { mutableStateOf("") }
 
     Scaffold(
         topBar = {
@@ -45,7 +46,7 @@ fun DiscussionPage(){
             } },
 
     ) { innerPadding ->
-        DiscussionPageWithData(innerPadding, discussionDataList)
+        DiscussionPageWithData(innerPadding, discussionDataList, searchDiscussion)
     }
 }
 
@@ -53,12 +54,25 @@ fun DiscussionPage(){
 fun DiscussionPageWithData(
     innerPaddingValues: PaddingValues,
     data: List<DiscussionData>,
+    query: String,
     modifier: Modifier = Modifier
 ){
+    var filteredList by rememberSaveable { mutableStateOf(data) }
+
+    LaunchedEffect(query) {
+        filteredList = if(query.isBlank()){
+            data
+        } else {
+            data.filter {
+                it.accName.contains(query, ignoreCase = true)
+            }
+        }
+    }
+
     LazyColumn(
         modifier.padding(innerPaddingValues)
     ) {
-        items(items = data){ item ->
+        items(items = filteredList){ item ->
             AccDiscussion(
                 drawable = item.profile,
                 accName = item.accName,

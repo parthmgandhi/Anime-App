@@ -14,7 +14,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
-import androidx.compose.material3.Divider
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -23,7 +22,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -49,7 +48,7 @@ import com.example.animeapp.Data.AllAnimeList
 
 @Composable
 fun DiscoverPage(navController: NavController){
-    var searchDiscover by remember { mutableStateOf("") }
+    var searchDiscover by rememberSaveable { mutableStateOf("") }
 
     Scaffold(
         topBar = { Column {
@@ -151,7 +150,7 @@ fun AfterSearchLayout(
 
     val context = LocalContext.current
 
-    var filteredList by remember { mutableStateOf(AllAnimeList) }
+    var filteredList by rememberSaveable { mutableStateOf(AllAnimeList) }
 
     LaunchedEffect(query) {
         filteredList = if (query.isBlank()) {
@@ -219,7 +218,7 @@ fun AfterSearch(
             )
 
         }
-        Divider(
+        HorizontalDivider(
             color = Color.Gray,
             thickness = 1.dp,
         )
